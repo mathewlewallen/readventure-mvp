@@ -1,0 +1,17 @@
+node_modules
+dist
+.next
+coverage
+.build
+build
+.eslintrc.js
+pnpm-lock.yaml
+yarn.lock
+lib
+.turbo
+.expo
+.expo-shared
+*.config.js
+*.config.cjs
+*.d.ts
+scripts
