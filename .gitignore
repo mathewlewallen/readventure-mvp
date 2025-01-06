@@ -1,16 +1,29 @@
-node_modules
-.pnp
+# Dependencies
+node_modules/
+/.pnp
 .pnp.js
-coverage
-.next
-out
-build
-dist
-.DS_Store
-*.pem
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.yarn/install-state.gz
+pnpm-lock.yaml
+yarn.lock
+
+# Testing
+/coverage
+/.nyc_output
+
+# Build outputs
+/dist
+/build
+/out
+/.next
+/lib
+/web-build
+
+# Environment variables
 .env
 .env.*
 !.env.example
@@ -18,19 +31,65 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDE and editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.pem
+*.swp
+
+# Mobile development
+.expo/
+.expo-shared/
+android/app/build/
+android/.gradle/
+ios/Pods/
+ios/build/
+xcuserdata/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+expo-env.d.ts
+
+# Misc
 .turbo
 .vercel
-pnpm-lock.yaml
-yarn.lock
-lib
-.expo
-.expo-shared
-Thumbs.db
-*.swp
-android/app/build
-android/.gradle
-ios/Pods
-ios/build
-xcuserdata
-.idea
+.temp
+.tmp
+pids
+*.pid
+*.seed
+*.pid.lock
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 google-service-account.json
+app-example

@@ -1,15 +1,74 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Dependencies
 node_modules/
+/.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.yarn/install-state.gz
+pnpm-lock.yaml
+yarn.lock
 
-# Expo
+# Testing
+/coverage
+/.nyc_output
+
+# Build outputs
+/dist
+/build
+/out
+/.next
+/lib
+/web-build
+
+# Environment variables
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDE and editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.pem
+*.swp
+
+# Mobile development
 .expo/
-dist/
-web-build/
-expo-env.d.ts
-
-# Native
+.expo-shared/
+android/app/build/
+android/.gradle/
+ios/Pods/
+ios/build/
+xcuserdata/
 *.orig.*
 *.jks
 *.p8
@@ -17,22 +76,20 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
-.DS_Store
-*.pem
-
-# local env files
-.env*.local
-
-# typescript
+# TypeScript
 *.tsbuildinfo
+next-env.d.ts
+expo-env.d.ts
 
+# Misc
+.turbo
+.vercel
+.temp
+.tmp
+pids
+*.pid
+*.seed
+*.pid.lock
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+google-service-account.json
 app-example
